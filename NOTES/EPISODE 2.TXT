@@ -1,0 +1,41 @@
+What is a bundler
+-A bundler is a tool that combines all files in to a single one and make it production ready.
+
+ex->Parcel
+
+what is the diffrence between ^ and  ~
+^ caret
+-It is used for minor upgrade in the package 
+
+~Tilde->
+It is used for Major upgrade in dependency.
+Q) What is Package-lock.json
+
+Keeps a track of exact version that was installed.
+Q) Why so many packages are installed in node modules
+
+-Each package has its own dependency which needs to be installed 
+
+Q)what does npx mean
+
+executing parcel/bunlder 
+
+#parcel
+
+->Dev build
+->Local server
+->HMR->Hot module replacment
+->file watching algo
+->Caching
+->Image optimization
+->Minification
+->Bundling
+->Compress
+->Code splitting
+->Diffrential bundling-support older browsers
+-Diagnostic behind the scene.
+-HTTPS
+-tree shaking algo.
+
+
+

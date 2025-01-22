@@ -2,7 +2,8 @@
 // var heading=document.createElement("h1");
 // heading.innerHTML="Hello Shivansh";
 // ele.append(heading)
-
+import React from "react";
+import ReactDOM from "react-dom/client";
 var ele=React.createElement(
     "div",
     {id:"Ajnino moto"},[

@@ -1,0 +1,9 @@
+1) In this episode we learnt basics of react ->IT IS A LIBRARY,which can be used in small part of projects 
+
+2) HOW to import CDN LINKS IN YOUR projects
+3) VAR A=React.createelement("h1",{},"child")
+three argument are->type of element,arguments like id and class,and children 
+
+4) it is initially an javascript objects which is then converted to html element after rendering
+
+5)if initially there exist and already  h1 element inside div,then the newly created h1 will replace and not append the existing h1.
