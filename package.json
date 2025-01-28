@@ -4,7 +4,10 @@
   "description": "This is Namaste react By akshay saini",
   
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start":"parcel index.html",
+    "build":"parcel build index.html"
+
   },
   "author": "Shivansh Chaturvedi",
   "license": "ISC",

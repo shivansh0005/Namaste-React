@@ -1,0 +1,32 @@
+We can create script for (npx parcel index.html->npm run start or npm start)
+
+"start":"npx run index.html",
+"build":"npx build index.html"
+
+*note run is mandatory for build command
+
+npm install -g serve
+
+serve -s dist
+
+http://localhost:3000
+for running dev build
+
+//JSX->Javascript syntax  which is easier to create react element
+
+-It is not same as React.
+
+//Functional component->IT is a javascript function that returns JSX
+
+Naming should start with a Capital letter thats a rule
+
+->We can use one componnt inside other for rx
+
+const H=()=>{
+    return <div>
+<Title/>
+
+    </div
+}
+
+->>We can write any peice of javascript using curly braces inside react component 
