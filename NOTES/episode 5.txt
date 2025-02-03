@@ -1,0 +1,7 @@
+#REACT  Hooks
+'(Normal js Utility function)
+-useState()-->Use to generate super powerful react variable
+
+-useEffect()
+
+->When ever a state variable updates react rerender its component
