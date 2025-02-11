@@ -8,6 +8,8 @@ import ShimmerUI from "./ShimmerUI";
 console.log(resobj);
 const Body = () => {
   const [resobj1, setResobj1] = useState([]);
+  const[filteredres,setfilteredres]=useState([]);
+  const [searchtext,setsearchtext]=useState("")
   //Continue from use effect and check the image taken in you gallery for why we are using the useEffect
   useEffect(() => {
     fetchData();
@@ -23,6 +25,7 @@ const Body = () => {
     setResobj1(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+    setfilteredres(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   };
 // This is known as conditional rendering
   if (resobj1.length === 0) {
@@ -40,8 +43,23 @@ const Body = () => {
 
   return (
     <div className="body">
+      <div className="buttons">
       <div className="search">
-        <h5 className="v">Search Your Fav Restaurants</h5>
+       <input type="text" className="search-box"value={searchtext} onChange={(e)=>{
+setsearchtext(e.target.value);
+       }}/>
+       <button onClick={()=>{
+console.log(searchtext)
+ const filterres=resobj1.filter((res)=>res.info.name.toLowerCase().includes(searchtext.toLowerCase()));
+ setfilteredres(filterres)
+
+
+
+       }}>Search</button>
+      </div>
+      <div className="search1">
+       
+        
         <button
           className="filter-btn"
           onClick={() => {
@@ -54,9 +72,10 @@ const Body = () => {
           Filter Top Rated
         </button>
       </div>
+      </div>
 
       <div className="res-container">
-        {resobj1.map((restaurant) => (
+        {filteredres.map((restaurant) => (
           <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>
