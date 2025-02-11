@@ -1,0 +1,10 @@
+-Learn map filter reduce and learn fetch and promise
+
+
+//Learnings->
+
+Hooks works like magic what i have learn if if we need to trigger react fibre/rec algo we need to use react hooks like use state->what is does is it uses a function to updated the changes and the functionact as a trigger point
+
+ex->const [btnName,setbtnName]=useState(//whatever that needs to be changed as per requirement)
+
+-->What it does is itrerenders the component it is used itrerenders
