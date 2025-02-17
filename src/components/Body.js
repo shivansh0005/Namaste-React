@@ -63,17 +63,16 @@ setsearchtext(e.target.value);
       <div className="search1">
        
         
-        <button
-          className="filter-btn"
-          onClick={() => {
-            setResobj1((prevRestaurants) =>
-              prevRestaurants.filter((res) => res.info.avgRating >= 4.4)
-            );
-            console.log(resobj1);
-          }}
-        >
-          Filter Top Rated
-        </button>
+      <button
+  className="filter-btn"
+  onClick={() => {
+    const topRatedRestaurants = resobj1.filter((res) => res.info.avgRating >= 4.4);
+    setfilteredres(topRatedRestaurants);
+  }}
+>
+  Filter Top Rated
+</button>
+
       </div>
       </div>
 
