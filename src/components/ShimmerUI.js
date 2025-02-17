@@ -10,6 +10,31 @@ const ShimmerUi=()=>{
 
 </div>
 </div>
+<div className="Shimmer">
+<div className="i">
+
+</div>
+</div>
+<div className="Shimmer">
+<div className="i">
+
+</div>
+</div>
+<div className="Shimmer">
+<div className="i">
+
+</div>
+</div>
+<div className="Shimmer">
+<div className="i">
+
+</div>
+</div>
+<div className="Shimmer">
+<div className="i">
+
+</div>
+</div>
 
    </div>
    )

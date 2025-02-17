@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import resobj from "../utils/mockdata";
 import { useEffect, useState } from "react";
 import ShimmerUI from "./ShimmerUI";
+import { Link } from "react-router-dom";
 
 //  console.log(resobj1);
 
@@ -20,7 +21,9 @@ const Body = () => {
     );
 
     const json = await data.json();
-    console.log(json);
+
+   
+  
 
     setResobj1(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
@@ -49,7 +52,7 @@ const Body = () => {
 setsearchtext(e.target.value);
        }}/>
        <button onClick={()=>{
-console.log(searchtext)
+
  const filterres=resobj1.filter((res)=>res.info.name.toLowerCase().includes(searchtext.toLowerCase()));
  setfilteredres(filterres)
 
@@ -76,7 +79,7 @@ console.log(searchtext)
 
       <div className="res-container">
         {filteredres.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+          <Link key={restaurant.info.id} to={"/restaurant/"+restaurant.info.id}><RestaurantCard  resData={restaurant} /></Link>
         ))}
       </div>
     </div>

@@ -1,59 +1,4 @@
-/* h1{
-    color:red;
-}
-#Heading{
-    color:purple;
-}
-.header{
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid black;
-}
-.logo {
-  width: 200px;
-  
-}
-.nav-items>ul{
-    margin-top:60px;
-    font-size: 20px;
-    display: flex;
-    list-style: none;
-  
-}
-.nav-items>ul>li{
-    padding: 10px;;
-    margin:10px;
-}
-.res-card{
-    width:200px;
-    height:310px;
-    /* border:1px solid black; */
-    /* padding:5px;
-}
 
-.res-card:hover{
-    border:1px solid black; 
-    cursor:pointer; 
-}
-.search{
-    padding :10px;
-}
-
-.res-logo{
-    height:150;
-    /* padding:5px; */
-    /* width:190px;
-}
-.res-container{
-    display: flex;
-    flex-wrap: wrap;  /* Allows cards to move to the next row if needed */
-    /* gap: 16px;  /* Space between cards */
-    /* justify-content: space-evenly; /* Adjusts card positioning */
-    /* align-items: stretch;
-}  */ 
-
-
-/* General Styling */
 * {
     margin: 0;
     padding: 0;
@@ -360,6 +305,161 @@ body {
     display: flex;
     align-items: center;
 }
+
+.restaurant-menu {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.restaurant-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff6b6b;
+    margin-bottom: 10px;
+}
+
+.menu-heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item {
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.menu-item-image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.menu-item-price {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ff7e5f;
+}
+
+.no-menu {
+    font-size: 18px;
+    color: #888;
+}
+a {
+    text-decoration: none;
+    color: inherit; /* This ensures the link takes the color of its parent */
+}
+
+.nav-items button {
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    background: none;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    padding: 0;
+}
+
+.nav-items button:hover {
+    color: #ff6b6b;
+}
+.res-card {
+    width: 250px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.res-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.res-logo {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.res-card-content {
+    padding: 10px 0;
+}
+
+.res-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.res-cuisines {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.res-cost {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.res-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.res-rating {
+    background-color: #ffcc00;
+    padding: 4px 8px;
+    border-radius: 8px;
+    color: #333;
+}
+
+.res-time {
+    color: #666;
+}
+
+
 
 
 
