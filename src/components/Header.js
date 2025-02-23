@@ -1,11 +1,12 @@
 import { LOGO_URL } from "../utils/constants";
 import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
+import useOnlinestatus from "../utils/useOnlinestatus";
 
  const Header=()=>{
   
   let [btnlogin,setbtnlogin]=useState("Login");
-
+  const onlinestatus=useOnlinestatus();
   //use effect 101->if Called without dependency array it will be called everytime component renders 
 //   if called with empty dependency array it will be called Only during intial render
 //IF called with some dependency it will be called when the dependency changes 
@@ -18,6 +19,7 @@ import { Link } from "react-router-dom";
         </div>
         <div className="nav-items">
             <ul>
+             
                 <li>
                   <Link to="/">Home</Link>
                 </li>
@@ -38,7 +40,15 @@ import { Link } from "react-router-dom";
 
 
              </li>
+             <li>
+              <Link to="/grocery">Grocery</Link>
+             </li>
+
+             <li>
+               {onlinestatus?"🟢":"🔴"}
+              </li>
  
+
             </ul>
         </div>
     </div>

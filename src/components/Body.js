@@ -3,8 +3,9 @@ import resobj from "../utils/mockdata";
 import { useEffect, useState } from "react";
 import ShimmerUI from "./ShimmerUI";
 import { Link } from "react-router-dom";
+import useOnlinestatus from "../utils/useOnlinestatus";
 
-//  console.log(resobj1);
+
 
 console.log(resobj);
 const Body = () => {
@@ -31,6 +32,12 @@ const Body = () => {
     setfilteredres(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   };
 // This is known as conditional rendering
+
+const online=useOnlinestatus();
+if(online===false){
+  return <h1>Looks like you are ofline !!!</h1>
+}
+
   if (resobj1.length === 0) {
     return (
       <div className="c">

@@ -1,4 +1,20 @@
-* {
+.filter-btn {
+    display: block;
+    margin: 20px auto; /* Centers the button */
+    padding: 10px 15px;
+    background-color: #f8b400;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+}
+
+.filter-btn:hover {
+    background-color: #e09b00;
+}* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -393,13 +409,56 @@ a {
     color: #ff6b6b;
 }
 
+.User-Card {
+    width: 320px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    margin: 40px auto;
+    font-family: "Arial", sans-serif;
+    transition: transform 0.3s ease-in-out;
+}
 
+.User-Card:hover {
+    transform: scale(1.05);
+}
 
+.User-Card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4a90e2;
+}
 
+.User-Card h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
 
+.User-Card h3 {
+    color: #666;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
 
-  
-  
+.User-Card h4 {
+    color: #4a90e2;
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Responsive Styling */
+@media (max-width: 480px) {
+    .User-Card {
+        width: 90%;
+        padding: 15px;
+    }
+}
 
 
 
