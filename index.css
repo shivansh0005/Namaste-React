@@ -1,20 +1,5 @@
-.filter-btn {
-    display: block;
-    margin: 20px auto; /* Centers the button */
-    padding: 10px 15px;
-    background-color: #f8b400;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 20px;
-    font-size: 14px;
-    transition: background 0.3s ease-in-out;
-}
-
-.filter-btn:hover {
-    background-color: #e09b00;
-}* {
+@import "tailwindcss";
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -459,6 +444,107 @@ a {
         padding: 15px;
     }
 }
+
+.add-item-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.add-item-btn:hover {
+    background-color: #333;
+}
+.cart-container {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cart-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ff4d4d;
+}
+
+.empty-cart {
+    font-size: 18px;
+    color: gray;
+}
+
+.cart-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.cart-item-details {
+    flex: 1;
+    text-align: left;
+}
+
+.cart-item-price {
+    font-size: 16px;
+    color: #28a745;
+}
+
+.remove-btn {
+    padding: 8px 12px;
+    border: none;
+    background: red;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background: darkred;
+}
+
+.clear-cart-btn {
+    margin-top: 20px;
+    padding: 12px 16px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.clear-cart-btn:hover {
+    background: darkred;
+}
+
+
+
 
 
 

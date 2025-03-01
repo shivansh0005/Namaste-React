@@ -2,6 +2,8 @@ import { LOGO_URL } from "../utils/constants";
 import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import useOnlinestatus from "../utils/useOnlinestatus";
+import { useSelector } from "react-redux";
+
 
  const Header=()=>{
   
@@ -13,6 +15,10 @@ import useOnlinestatus from "../utils/useOnlinestatus";
   useEffect(()=>{
 
   });
+
+  const cartItems=useSelector((store)=>store.cart.items);
+  console.log(cartItems);
+
     return <div className="header">
         <div className="logo-container">
             <img className="logo"src={LOGO_URL}alt="Unable to load" />
@@ -26,10 +32,12 @@ import useOnlinestatus from "../utils/useOnlinestatus";
                 <li>
                 <Link to="/about"> About</Link>
                 </li>
-                <li>
+                {/* <li>
                 <Link to="/contactus"> Contact</Link>
+                  </li> */}
+                <li >
+                 <Link to="/cart"> Cart</Link>({cartItems.length})
                   </li>
-                <li>Cart</li>
              <li>
                 <button onClick={()=>{
                     setbtnlogin((prev)=>(prev==="Login"?"Logout":"Login")
@@ -38,17 +46,12 @@ import useOnlinestatus from "../utils/useOnlinestatus";
                     {btnlogin}
                 </button>
 
-
              </li>
-             <li>
-              <Link to="/grocery">Grocery</Link>
-             </li>
+             
 
              <li>
                {onlinestatus?"🟢":"🔴"}
-              </li>
- 
-
+           </li>
             </ul>
         </div>
     </div>

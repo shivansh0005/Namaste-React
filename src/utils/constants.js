@@ -7,3 +7,5 @@ export const MENU_LOGO="https://media-assets.swiggy.com/swiggy/image/upload/fl_l
 export const MENU_API="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.501425840925776&lng=77.38397240638733&restaurantId="
 
 // https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.468951546949388&lng=77.49547719955444&restaurantId=253985&catalog_qa=undefined&submitAction=ENTER
+
+export const CART_URL="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_100,h_100,c_fill/"

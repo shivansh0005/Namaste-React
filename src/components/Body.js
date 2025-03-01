@@ -22,6 +22,7 @@ const Body = () => {
     );
 
     const json = await data.json();
+    console.log(json)
 
    
   

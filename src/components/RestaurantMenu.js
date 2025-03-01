@@ -2,11 +2,21 @@ import ShimmerUi from "./ShimmerUI";
 import { MENU_LOGO } from "../utils/constants";
 import { useParams } from "react-router-dom";
 import  useRestaurantMenu  from "../utils/useRestaurantMenu";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
+
+
+
+
+
+
 
 const RestaurantMenu = () => {
+    const dispatch=useDispatch();
    
     const {resId}=useParams();
     const resInfo=useRestaurantMenu(resId);
+    console.log(resInfo);
 if (!resInfo) return <ShimmerUi />;
 
     const restaurantName = resInfo?.cards?.[0]?.card?.card?.text || "Unknown Restaurant";
@@ -34,6 +44,10 @@ if (!resInfo) return <ShimmerUi />;
                                 />
                             )}
                             <p className="menu-item-price">Price: ₹{item.price / 100 || "N/A"}</p>
+                            <button className="add-item-btn" onClick={() => dispatch(addItem(item))}>
+    Add Item
+</button>
+
                         </li>
                     ))
                 ) : (
